@@ -14,4 +14,7 @@ household_power_consumption <- read.table("household_power_consumption.txt",
                                as_tibble() %>%
                                filter(Date == "1/2/2007" | Date == "2/2/2007")
 
-        
+hist(household_power_consumption$Global_active_power,
+     main = "Global Active Power",
+     xlab = "Global Active Power(kilowatts)", 
+     col = "red")
