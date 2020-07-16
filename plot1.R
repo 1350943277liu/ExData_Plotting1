@@ -14,7 +14,10 @@ hpc <- read.table("household_power_consumption.txt",
                                as_tibble() %>%
                                filter(Date == "1/2/2007" | Date == "2/2/2007")
 
-png("plot1.png")
+# since default dimension is 480*480, as required, no need to set it explicitly. 
+# The same reason for plot2 to plot4.
+
+png("plot1.png") 
 hist(hpc$Global_active_power,
      main = "Global Active Power",
      xlab = "Global Active Power(kilowatts)", 
